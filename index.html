@@ -13,33 +13,218 @@
       </strong>
     </div>
     <hr>
+    web page mentained by Ivan Pihdurskyi &lt;ivan.pidhurskyi@desy.de&gt;<br>
+    last eddited: 22.05.2020
+    <hr>
     <div>
+      <h2>Introduction</h2>
+      Azimuthal angular decorrelation measurements have been extensively studied because it
+      is one of the preferred channels to study perturbative QCD, soft-gluon radiation and its
+      implications looking for physics beyond the standard model. Several decorrelation meas-
+      urements of two jets have been performed in hadron collisions at a large center-of-mass
+      energy [1–3]. In these collisions, the azimuthal decorrelation angle ∆φ is equal to π (back-
+      to-back events) in the extreme case when the two jets are produced with equal transverse
+      momenta and there is no soft-gluon radiation. Recent pQCD calculations have been able
+      to provide excellent description of the data in high-energy hadron collisions [4]. Theoret-
+      ical calculations of lepton-jet decorrelation rely on simplified calculation compared to the
+      counterpart in hadron collision [5]. New azimuthal angular decorrelation measurements
+      with the HERA collider in deep inelastic scattering (DIS) are presented in this analysis.
+      In this lepton-proton type of collider, events will deviate from ∆φ ∼ π due to higher order
+      gluon radiation and the intrinsic transverse momentum of the struck parton in the proton,
+      providing a way to study transverse momentum distribution (TMDs) and its evolution in
+       squared four-momentum transfer Q2. Additionally, the kinematic coverage at HERA
+      is capable to reach lower values of Bjorken-x (xBj ), which provide valuable information in
+      the study of the nucleon structure and will complement previous measurements at large
+      center-of-mass energy, where pQCD calculation has shown good agreement with the data.
+      The relative low energy measurements at HERA will test the limits and/or reach of the
+      perturbative calculation. With the possible construction of a new electron ion collider
+      (EIC) in USA, the interest looking into lepton-proton collision data have been growing
+      both from the theory and experimental community.
+
+      <h2>Event selection</h2>
+      This analysis was performed with data taken during HERA II period with electron collision
+      in the years 2004-2006, corresponding to an integrated luminosity of 189 pb−1
+      , and during
+      the years 2006-2007 for the positron period with 143 pb−1
+      . During these periods, the lepton
+      energy was Ee = 27.5 GeV collided with protons of an energy 920 GeV, corresponding to
+      a centre-of-mass energy √
+      s = 318 GeV.
+      The selection of neutral current (NC) events was perform in a similar manner that previous
+      ZEUS analysis of jets in DIS [6, 7]. The cuts used in this analysis are the following:
       <ul>
-        <li>Introduction</li>
-        <li>Selection cuts</li>
-        <li>MC explained</li>
-        <li><a href="control-plots/index.html">Control plots</a></li>
-        <li>Bin migration matrices (hadron vs detector)</li>
-        <li>Unfolding</li>
-        <!--<li>Covariance matrices (this comes from TUnfold)</li>-->
-        <li>Systematics: (add the correlation matrices via TUnfold)</li>
-        <ul>
-          <li><a href="sys/etjet/index.html">Jet energy scale</a> &#10003;</li>
-          <li><a href="sys/siecorr/index.html">Lepton energy</a> &#10003;</li>
-          <li>Add statistical error of theory curve &#10003;</li>
-          <li><a href="sys/lepto/index.html">Difference between Ariadne and Lepto</a> &#10003;</li>
-          <li>Breit frame</li>
-          <li>
-            Selection cuts
-            <ul>
-              <li>Lepton probability &#10003;</li>
-              <li><a href="sys/y/index.html">Inelasticity</a> &#10003;</li>
-              <li><a href="sys/empz/index.html">E - p<sub>z</sub></a> &#10003;</li>
-            </ul>
-          </li>
-        </ul>
-        <li><a href="xsections/index.html">Final plots</a> and conclusions</li>
+        <li>10 GeV 2 &lt; Q2 &lt; 350 GeV 2</li>
+        <li>yjb &gt; 0.04</li>
+        <li>yel &lt; 0.7</li>
+        <li>|V ertexZ| &lt; 40 cm</li>
+        <li>45 &lt; E − pz &lt; 65 (both calorimeter and Zufo)</li>
+        <li>pT / √ET &lt; 2.5 (of the calorimeter)</li>
+        <li>Lepton Energy E &gt; 10 GeV</li>
+        <li>140o &lt; θlepton &lt; 180o</li>
+        <li>Lepton position x2 + y2 &gt; 20 cm2</li>
+        <li>Hadronic energy inside cone centred on electron has to be smaller than 10% of total energy in cone</li>
+        <li>Use lepton with highest probability and P rob &gt; 0.9</li>
+        <li>Trigger SPP02 for 0405e</li>
+        <li>Trigger SPP09 for 06e and 0607p</li>
+        <li>Jet transverse energy and momentum ET &gt; 2.5 GeV 2 and PT &lt; 30 GeV</li>
+        <li>
+          Jet |η| &lt; 1 The same analysis procedure and cuts were used with ARIADNE Monte Carlo (MC) sample.
+          Comparison of the data and MC at the detector level for the vertex, Q2, Bjorken-x and lepton inelasticity (electron method), is presented in fig. 1.
+          This analysis uses jets clustered with massive kt-jet algorithm [8], with jet resolution parameter R = 1.
+        </li>
       </ul>
+
+      <h2>Monte Carlo Simulation</h2>
+      The NC DIS events were generated with DJANGOH 1.6 [9].
+      The ARIADNE 4.12 colour-dipole model [10] was used for parton showering.
+      The Lund string model was used for hadronization, as implemented in JETSET 7.4.1 [11].
+      Diffration processes were included in the simulation.
+
+      <h2>Control plots</h2>
+      <ul>
+        <li>
+          <a href="absetale1/control-plots/index.html">|&eta;<sup>Jet</sup>| &lt; 1</a>
+          <font color=green>✓</font>
+        </li>
+        <li>
+          <a>-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a>
+          <font color=red>✗</font>
+        </li>
+      </ul>
+
+      <h2>Bin migration matrices</h2>
+      <table>
+        <tr>
+          <th>|&eta;<sup>Jet</sup>| &lt; 1</th>
+          <th>-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</th>
+        </tr>
+        <tr>
+          <td style="text-align:center">
+            <img width="90%" src="absetale1/xsections/images/mig-integral.png">
+          </td>
+          <td style="text-align:center">
+            <img width="90%" src="widereta/xsections/images/mig-integral.png">
+          </td>
+        </tr>
+      </table>
+
+      <h2>Unfolding</h2>
+
+      <h2>Systematics</h2>
+      <ul>
+
+        <li>
+          The energy of the measured scattered lepton was varied by its known scale uncertainty of ±2% [6].
+          <ul>
+            <li>
+              <a href="absetale1/sys/siecorr/index.html">|&eta;<sup>Jet</sup>| &lt; 1</a>
+              <font color='green'>✓</font>
+            </li>
+            <li>
+              <a href="widereta/sys/siecorr/index.html">-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a>
+              <font color='green'>✓</font>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          The jet energy scale was varied ±4% for values of E<sub>T</sub><sup>jet</sup> &lt; 10 GeV
+          and ±2.5% for E<sub>T</sub><sup>jet</sup> &gt; 10 GeV [6]
+          <ul>
+            <li>
+              <a href="absetale1/sys/etjet/index.html">|&eta;<sup>Jet</sup>| &lt; 1</a>
+              <font color='green'>✓</font>
+            </li>
+            <li>
+              <a href="widereta/sys/etjet/index.html">-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a>
+              <font color='green'>✓</font>
+            </li>
+          </ul>
+        </li>
+
+        <!--<li>Add statistical error of theory curve &#10003;</li>-->
+
+        <li>
+          Difference between Ariadne and Lepto.
+          <ul>
+            <li>
+              <a href="absetale1/sys/lepto/index.html">|&eta;<sup>Jet</sup>| &lt; 1</a>
+              <font color='green'>✓</font>
+            </li>
+            <li>
+              <a>-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a>
+              <font color='red'>✗</font>
+            </li>
+          </ul>
+        </li>
+
+        <li>Breit frame <font color='red'>✗</font></li>
+
+        <li>
+          The uncertainty due to the lepton selection cuts was estimated by varying the values of
+          the cuts within the resolution of each variable (Not shown in this study).
+          <ul>
+            <li>
+              |&eta;<sup>Jet</sup>| &lt; 1
+              <ul>
+                <li><a href="absetale1/sys/eprob/index.html">Lepton probability</a> <font color='green'>✓</font></li>
+                <li><a href="absetale1/sys/y/index.html">Inelasticity</a> <font color='green'>✓</font></li>
+                <li><a href="absetale1/sys/empz/index.html">E - p<sub>z</sub></a> <font color='green'>✓</font></li>
+              </ul>
+            </li>
+            <li>
+              -1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8
+              <ul>
+                <li><a href="widereta/sys/eprob/index.html">Lepton probability</a> <font color='green'>✓</font></li>
+                <li><a>Inelasticity</a> <font color='red'>✗</font></li>
+                <li><a href="widereta/sys/empz/index.html">E - p<sub>z</sub></a> <font color='green'>✓</font></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+      </ul>
+
+      <h2>Final plots and conclusions</h2>
+      <ul>
+        <li><a href="absetale1/xsections/index.html">|&eta;<sup>Jet</sup>| &lt; 1</a></li>
+        <li><a href="widereta/xsections/index.html">-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a></li>
+      </ul>
+
+      <!--<hr>-->
+      <!--<ul>-->
+        <!--<li>Introduction</li>-->
+        <!--<li>Selection cuts</li>-->
+        <!--<li>MC explained</li>-->
+        <!--<li><a href="absetale1/control-plots/index.html">Control plots</a></li>-->
+        <!--<li>Bin migration matrices (hadron vs detector)</li>-->
+        <!--<li>Unfolding</li>-->
+        <!--[><li>Covariance matrices (this comes from TUnfold)</li><]-->
+        <!--<li>Systematics: (add the correlation matrices via TUnfold)</li>-->
+        <!--<ul>-->
+          <!--<li><a href="absetale1/sys/etjet/index.html">Jet energy scale</a> &#10003;</li>-->
+          <!--<li><a href="absetale1/sys/siecorr/index.html">Lepton energy</a> &#10003;</li>-->
+          <!--<li>Add statistical error of theory curve &#10003;</li>-->
+          <!--<li><a href="absetale1/sys/lepto/index.html">Difference between Ariadne and Lepto</a> &#10003;</li>-->
+          <!--<li>Breit frame</li>-->
+          <!--<li>-->
+            <!--Selection cuts-->
+            <!--<ul>-->
+              <!--<li>Lepton probability &#10003;</li>-->
+              <!--<li><a href="absetale1/sys/y/index.html">Inelasticity</a> &#10003;</li>-->
+              <!--<li><a href="absetale1/sys/empz/index.html">E - p<sub>z</sub></a> &#10003;</li>-->
+            <!--</ul>-->
+          <!--</li>-->
+        <!--</ul>-->
+        <!--<li>-->
+          <!--Final plots and conclusions-->
+          <!--<ul>-->
+            <!--<li><a href="absetale1/xsections/index.html">|&eta;<sup>Jet</sup>| &lt; 1</a></li>-->
+            <!--<li><a href="widereta/xsections/index.html">-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a></li>-->
+          <!--</ul>-->
+        <!--</li>-->
+      <!--</ul>-->
+
     </div>
     <hr>
     <div>
