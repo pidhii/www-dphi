@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>&#8710;&phi;</title>
+
+    <!--
+      In order to write latex-style equations, i.e. <span lang=latex>\sqrt{s}</span>.
+      (see https://www.codecogs.com/latex/integration/htmlequations.php)
+    -->
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
   </head>
   <body>
     <div align='center' style='padding:10px;background-color:#DC143C11'>
@@ -13,7 +20,7 @@
       </strong>
     </div>
     <hr>
-    web page mentained by Ivan Pihdurskyi &lt;ivan.pidhurskyi@desy.de&gt;<br>
+    web page meintained by Ivan Pihdurskyi &lt;ivan.pidhurskyi@desy.de&gt;<br>
     last eddited: 22.05.2020
     <hr>
     <div>
@@ -43,36 +50,32 @@
 
       <h2>Event selection</h2>
       This analysis was performed with data taken during HERA II period with electron collision
-      in the years 2004-2006, corresponding to an integrated luminosity of 189 pb−1
-      , and during
-      the years 2006-2007 for the positron period with 143 pb−1
-      . During these periods, the lepton
-      energy was Ee = 27.5 GeV collided with protons of an energy 920 GeV, corresponding to
-      a centre-of-mass energy √
-      s = 318 GeV.
+      in the years 2004-2006, corresponding to an integrated luminosity of 189 pb−1,
+      and during the years 2006-2007 for the positron period with 143 pb−1.
+      During these periods, the lepton energy was Ee = 27.5 GeV collided with protons of an energy 920 GeV,
+      corresponding to a centre-of-mass energy √s = 318 GeV.
       The selection of neutral current (NC) events was perform in a similar manner that previous
       ZEUS analysis of jets in DIS [6, 7]. The cuts used in this analysis are the following:
       <ul>
-        <li>10 GeV 2 &lt; Q2 &lt; 350 GeV 2</li>
-        <li>yjb &gt; 0.04</li>
-        <li>yel &lt; 0.7</li>
-        <li>|V ertexZ| &lt; 40 cm</li>
-        <li>45 &lt; E − pz &lt; 65 (both calorimeter and Zufo)</li>
-        <li>pT / √ET &lt; 2.5 (of the calorimeter)</li>
+        <li>10 GeV<sup>2</sup> &lt; Q<sup>2</sup> &lt; 350 GeV<sup>2</sup></li>
+        <li>y<sub>jb</sub> &gt; 0.04</li>
+        <li>y<sub>el</sub> &lt; 0.7</li>
+        <li>|z<sub>vtx</sub>| &lt; 40 cm</li>
+        <li>45 &lt; E − p<sub>z</sub> &lt; 65 (both calorimeter and Zufo)</li>
+        <li>p<sub>T</sub> / √E<sub>T</sub> &lt; 2.5 (of the calorimeter)</li>
         <li>Lepton Energy E &gt; 10 GeV</li>
-        <li>140o &lt; θlepton &lt; 180o</li>
-        <li>Lepton position x2 + y2 &gt; 20 cm2</li>
+        <li>140<sup>&#9900;</sup> &lt; &theta;<sub>lepton</sub> &lt; 180<sup>&#9900;</sup></li>
+        <li>Lepton position x<sup>2</sup> + y<sup>2</sup> &gt; 20 cm<sup>2</sup></li>
         <li>Hadronic energy inside cone centred on electron has to be smaller than 10% of total energy in cone</li>
-        <li>Use lepton with highest probability and P rob &gt; 0.9</li>
+        <li>Use lepton with highest probability and Prob &gt; 0.9</li>
         <li>Trigger SPP02 for 0405e</li>
         <li>Trigger SPP09 for 06e and 0607p</li>
-        <li>Jet transverse energy and momentum ET &gt; 2.5 GeV 2 and PT &lt; 30 GeV</li>
-        <li>
-          Jet |η| &lt; 1 The same analysis procedure and cuts were used with ARIADNE Monte Carlo (MC) sample.
-          Comparison of the data and MC at the detector level for the vertex, Q2, Bjorken-x and lepton inelasticity (electron method), is presented in fig. 1.
-          This analysis uses jets clustered with massive kt-jet algorithm [8], with jet resolution parameter R = 1.
-        </li>
+        <li>Jet transverse energy and momentum E<sub>T</sub> &gt; 2.5 GeV and P<sub>T</sub> &lt; 30 GeV</li>
+        <li>Jet |η| &lt; 1</li>
       </ul>
+      The same analysis procedure and cuts were used with ARIADNE Monte Carlo (MC) sample.
+      <!--Comparison of the data and MC at the detector level for the vertex, Q<sup>2</sup>, Bjorken-x and lepton inelasticity (electron method), is presented in fig. 1.-->
+      This analysis uses jets clustered with massive kt-jet algorithm [8], with jet resolution parameter R = 1.
 
       <h2>Monte Carlo Simulation</h2>
       The NC DIS events were generated with DJANGOH 1.6 [9].
@@ -109,6 +112,7 @@
       </table>
 
       <h2>Unfolding</h2>
+      <font color=red>TODO: add correlation matrices with statistical uncertainties only</font>
 
       <h2>Systematics</h2>
       <ul>
@@ -191,49 +195,106 @@
         <li><a href="widereta/xsections/index.html">-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a></li>
       </ul>
 
-      <!--<hr>-->
-      <!--<ul>-->
-        <!--<li>Introduction</li>-->
-        <!--<li>Selection cuts</li>-->
-        <!--<li>MC explained</li>-->
-        <!--<li><a href="absetale1/control-plots/index.html">Control plots</a></li>-->
-        <!--<li>Bin migration matrices (hadron vs detector)</li>-->
-        <!--<li>Unfolding</li>-->
-        <!--[><li>Covariance matrices (this comes from TUnfold)</li><]-->
-        <!--<li>Systematics: (add the correlation matrices via TUnfold)</li>-->
-        <!--<ul>-->
-          <!--<li><a href="absetale1/sys/etjet/index.html">Jet energy scale</a> &#10003;</li>-->
-          <!--<li><a href="absetale1/sys/siecorr/index.html">Lepton energy</a> &#10003;</li>-->
-          <!--<li>Add statistical error of theory curve &#10003;</li>-->
-          <!--<li><a href="absetale1/sys/lepto/index.html">Difference between Ariadne and Lepto</a> &#10003;</li>-->
-          <!--<li>Breit frame</li>-->
-          <!--<li>-->
-            <!--Selection cuts-->
-            <!--<ul>-->
-              <!--<li>Lepton probability &#10003;</li>-->
-              <!--<li><a href="absetale1/sys/y/index.html">Inelasticity</a> &#10003;</li>-->
-              <!--<li><a href="absetale1/sys/empz/index.html">E - p<sub>z</sub></a> &#10003;</li>-->
-            <!--</ul>-->
-          <!--</li>-->
-        <!--</ul>-->
-        <!--<li>-->
-          <!--Final plots and conclusions-->
-          <!--<ul>-->
-            <!--<li><a href="absetale1/xsections/index.html">|&eta;<sup>Jet</sup>| &lt; 1</a></li>-->
-            <!--<li><a href="widereta/xsections/index.html">-1.5 &lt; &eta;<sup>Jet</sup> &lt; 1.8</a></li>-->
-          <!--</ul>-->
-        <!--</li>-->
-      <!--</ul>-->
-
-    </div>
-    <hr>
-    <div>
-      Backup (or for later):
+      <h2>References</h2>
       <ul>
-        <li>Tau parameter restriction</li>
-        <li>Leading jet misidentification</li>
-        <li>PHP contamination</li>
+        <li>
+          [1] Abazov, V. M. and others, Measurement of dijet azimuthal decorrelations at central
+          rapidities in <span lang="latex">p\bar{p}</span> collisions at <span lang=latex>\sqrt{s}</span> = 1.96 TeV, Phys. Rev. Lett.94, 221801 (2005).
+          <br>
+          <a href='http://dx.doi.org/10.1103/PhysRevLett.94.221801'>doi:10.1103/PhysRevLett.94.221801</a>.
+          <a href='http://arxiv.org/abs/hep-ex/0409040'>arXiv:hep-ex/0409040</a>.
+        </li>
+        <li>
+          [2] Khachatryan, Vardan and others, Dijet Azimuthal Decorrelations inppCollisions at
+          <span lang=latex>\sqrt{s}</span> = 7 TeV, Phys. Rev. Lett.106, 122003 (2011).
+          <br>
+          <a href='http://dx.doi.org/10.1103/PhysRevLett.106.122003'>doi:10.1103/PhysRevLett.106.122003</a>.
+          <a href='http://arxiv.org/abs/1101.5029'>arXiv:1101.5029</a>.
+        </li>
+        <li>
+          [3] Aad, Georges and others, Measurement of Dijet Azimuthal Decorrelations in pp Collisions at √s = 7 TeV, Phys. Rev. Lett.106, 172002 (2011).
+          <br>
+          <a href='http://dx.doi.org/10.1103/PhysRevLett.106.172002'>doi:10.1103/PhysRevLett.106.172002.</a>
+          <a href='http://arxiv.org/abs/1102.2696'>arXiv:1102.2696</a>.
+        </li>
+        <li>
+          [4] Sun, Peng and Yuan, C. -P. and Yuan, Feng, Transverse Momentum Resummation for Dijet Correlation in Hadronic Collisions, Phys. Rev.D92, 094007 (2015).
+          <br>
+          <a href='http://dx.doi.org/10.1103/PhysRevD.92.094007'>doi:10.1103/PhysRevD.92.094007</a>.
+          <a href='http://arxiv.org/abs/1506.0617'>arXiv:1506.0617</a>.
+        </li>
+        <li>
+          [5] Liu, Xiaohui and Ringer, Felix and Vogelsang, Werner and Yuan, Feng, Lepton-jet correlations in deep inelastic scattering at the electron-ion collider, Phys. Rev. Lett.126122, 192003 (2019).
+          <br>
+          <a href='http://dx.doi.org/10.1103/PhysRevLett.122.192003'>doi:10.1103/PhysRevLett.122.192003</a>
+        </li>
+        <li>
+          [6] Abramowicz, H. and others, Measurement of isolated photons accompanied by jets in deep inelastic ep scattering, Phys. Lett.B715, 88 (2012).
+          <br>
+          <a href='http://dx.doi.org/10.1016/j.physletb.2012.07.031'>doi:10.1016/j.physletb.2012.07.031</a>.
+          <a href='http://arxiv.org/abs/1206.2270'>arXiv:1206.2270</a>.
+        </li>
+        <li>
+          [7] <a href='https://zeusdp.desy.de/ZEUS_ONLY/analysis/primer/DIS/index.html'>https://zeusdp.desy.de/ZEUS_ONLY/analysis/primer/DIS/index.html</a>
+        </li>
+        <li>
+          [8] Ellis, Stephen D. and Soper, Davison E., Successive combination jet algorithm for hadron collisions, Phys. Rev. D48, 3160 (1993).
+          <br>
+          <a href='http://dx.doi.org/10.1103/PhysRevD.48.3160'>doi:10.1103/PhysRevD.48.3160</a>
+        </li>
+        <li>
+          [9] Spiesberger, H, Django 1.6 Version 4.6.6 A Monte Carlo Generator for Deep Inelastic Lepton Proton Scattering Including QED and QCD Radiative Effects (2005).
+          <br>
+          <a href='http://wwwthep.physik.uni-mainz.de/~hspiesb/djangoh/djangoh.html'>http://wwwthep.physik.uni-mainz.de/~hspiesb/djangoh/djangoh.html</a>.
+        </li>
+        <li>
+          [10] Lonnblad, Leif, ARIADNE version 4: A Program for simulation of QCD cascades implementing the color dipole model, Comput. Phys. Commun.71, 15 (1992).
+          <br>
+          <a href='http://dx.doi.org/10.1016/0010-4655(92)90068-A'>doi:10.1016/0010-4655(92)90068-A</a>.
+        </li>
+        <li>
+          [11] Sjostrand, Torbjorn, High-energy physics event generation with PYTHIA 5.7 and JETSET 7.4, Comput. Phys. Commun.82, 74 (1994).
+          <br>
+          <a href='http://dx.doi.org/10.1016/0010-4655(94)90132-5'>doi:10.1016/0010-4655(94)90132-5</a>.
+        </li>
+        <li>
+          [12] Schmitt, Stefan, TUnfold: an algorithm for correcting migration effects in high energy physics, JINST7, T10003 (2012).
+          <br>
+          <a href='http://dx.doi.org/10.1088/1748-0221/7/10/T10003'>doi:10.1088/1748-0221/7/10/T10003</a>.
+          <a href='http://arxiv.org/abs/1205.6201'>arXiv:1205.6201</a>.
+        </li>
       </ul>
+
+      <h2>HOWTO</h2>
+      <ol>
+        <li>
+          To apply event selection and generate intermediate root-files see <a href='https://www.desy.de/~pidhii/code/runner/README.txt'>README</a>.
+          All needed files can be found in the <a href='https://www.desy.de/~pidhii/code/runner/'>"runner"-direcory</a>.<br>
+          Whole directory in a single archive: <a href='https://www.desy.de/~pidhii/code/runner.tar.gz'>runner.tar.gz</a>.
+        </li>
+        <li>
+          To produce control plots use <a href='https://www.desy.de/~pidhii/code/ControlPlots.cpp'>ControlPlots.cpp</a>.<br>
+          usage: <code>./ControlPlots -d <path-to-data.root> -m <path-to-mc> [--bin &lt;ibin&gt;]</code><br>
+          where pathes specify root-file generated with desired multiplicity, and <b>optional</b> parameter <em><code>ibin</code></em> specifies a bin to do the plots for; otherwize plots will be made for integrated kinematic range.<br>
+          You can also check out <code>./ControlPlots -h</code> for more information on command line options.
+        </li>
+        <li>
+          In order to produce plots for normalized cross sections (with unfolding) use <a href='https://www.desy.de/~pidhii/code/CrossSection.C'>CrossSection.C</a>.<br>
+          compilation: <code>g++ `root-config --cflags --libs` -lUnfold -lconfig++ -o CrossSection CrossSection.C</code><br>
+          usage: <code>./CrossSection --pt|q2 -d &lt;path-to-data.root&gt; -m &lt;path-to-MC.root&gt; -t &lt;path-to-MC-had.root&gt; --sys &lt;list-of-systematics&gt;</code><br>
+          where <em><code>list-of-systematics</code></em> is the list of pathes (separated with spaces) to mc-root-files generated with, e.g., biased cuts.<br>
+          You can also check out <code>./CrossSections -h</code> for more information on command line options.
+        </li>
+      </ol>
     </div>
+    <!--<hr>-->
+    <!--<div>-->
+      <!--Backup (or for later):-->
+      <!--<ul>-->
+        <!--<li>Tau parameter restriction</li>-->
+        <!--<li>Leading jet misidentification</li>-->
+        <!--<li>PHP contamination</li>-->
+      <!--</ul>-->
+    <!--</div>-->
   </body>
 </html>
